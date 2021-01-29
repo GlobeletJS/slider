@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <title>Transform Test</title>
+
+    <link rel="stylesheet" type="text/css" href="transform.css">
+  </head>
+
+  <body>
+    <button id="slide">Slide</button>
+    <div class="transform-container">
+      <div class="menu" id="menu"><h1>Menu</h1></div>
+      <div class="main" id="main"><h1>Content</h1></div>
+    </div>
+  </body>
+
+  <script>
+    const menuClasses = document.getElementById("menu").classList;
+const mainClasses = document.getElementById("main").classList;
+document.getElementById("slide").addEventListener('click', () => {
+  menuClasses.toggle("slid");
+  mainClasses.toggle("shifted");
+}, false);
+  </script>
+</html>

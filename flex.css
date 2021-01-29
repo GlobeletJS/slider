@@ -1,0 +1,20 @@
+* {
+  box-sizing: border-box;
+}
+div { /* For QC purposes only */
+  border: 3px solid red;
+  padding: 10px;
+  margin: 10px;
+}
+.flex-container {
+  display: flex;
+  width: 600px;
+}
+.slide {
+  display: inline-block;
+  transform: translate(-20px);
+}
+.stretch {
+  display: inline-block;
+  flex: 1;
+}
