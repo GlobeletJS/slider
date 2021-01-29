@@ -1,49 +1,54 @@
 * {
   box-sizing: border-box;
 }
-#main {
+:root {
+  --menuwidth: 200px;
+  --menuheight: 100%;
+  --xslide: 200px;
+  --yslide: 0px;
+}
+@media screen and (min-height: 640px) and (orientation: portrait) {
+  :root {
+    --xslide: 0px;
+    --yslide: 320px;
+    --menuwidth: 100%;
+    --menuheight: 320px;
+  }
+}
+div { /* For QC purposes only */
+  text-align: center;
+}
+#slide {
+  position: absolute;
+  z-index: 2;
+}
+.transform-container { /* For QC only? Could be user-defined */
   position: relative;
   overflow: hidden;
+  width: 100%;
+  height: 100%;
 }
-canvas {
-  background-color: green;
-  height: 200px;
-  padding: 0;
-  border: 4px solid red;
+.transform-container div {
+  transition: 0.5s;
 }
-.container {
-  display: flex;
-  width: 400;
-  flex-direction: row;
-}
-.topLeft {
+.menu {
+  display: inline-block;
   position: absolute;
-  top: 0;
-  left: 0;
-}
-#globe {
-  /*display: flex;*/
-  overflow: auto;
-  flex: 1;
-}
-.toggle {
-  display: block;
-  padding: 0;
+  width: var(--menuwidth);
+  height: var(--menuheight);
+  transform: translate(calc(0px - var(--xslide)), calc(0px - var(--yslide)));
+  background: grey;
   z-index: 1;
 }
-input.toggle {
-  opacity: 0;
-  width: 0;
-  height: 0;
+.slid {
+  transform: translate(0px);
 }
-#settings {
-  padding: 20px;
-  height: 200px;
-  /*transform: translate(-100%);
-  transition: 0.25s;*/
-  background: rgba(0, 0, 255, 1.0);
-  overflow: auto;
+.shifted {
+  transform: translate(calc(var(--xslide) / 2), calc(var(--yslide) / 2));
 }
-#showSettings:checked + div {
-  transform: translate(0%);
+.main {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  background: green;
 }
