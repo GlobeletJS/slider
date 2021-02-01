@@ -1,12 +1,26 @@
-function setupInfoSlider({ infoId, mainId }) {
-  const infoClassList = document.getElementById(infoId).classList;
+function setupSlider({ settingId, mainId, infoId }) {
+  const settingClassList = document.getElementById(settingId).classList;
   const mainClassList = document.getElementById(mainId).classList;
+  const infoClassList = document.getElementById(infoId).classList;
 
-  return function() {
+  function toggleInfo() {
     infoClassList.toggle("slider-slid");
     mainClassList.toggle("slider-shifted");
-  };
+  }
+
+  function toggleSettings() {
+    settingClassList.toggle("slider-slid");
+  }
+
+  return { toggleInfo, toggleSettings };
 }
 
-const infoSlider = setupInfoSlider({ infoId: "info", mainId: "main" });
-document.getElementById("slide").addEventListener('click', infoSlider, false);
+const slider = setupSlider({ 
+  settingId: "settings",
+  mainId: "main",
+  infoId: "info",
+});
+document.getElementById("slide")
+  .addEventListener('click', slider.toggleInfo, false);
+document.getElementById("setter")
+  .addEventListener('click', slider.toggleSettings, false);
