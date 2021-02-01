@@ -1,26 +1,19 @@
-* { /* Should this be slider-specific? */
-  box-sizing: border-box;
-}
-:root { /* Should this be a slider-specific selector? */
+.slider-container {
   --menuwidth: min(480px, 50vw);
   --xslide: min(480px, 50vw);
   --menuheight: 100%;
   --yslide: 0px;
 }
 @media screen and (max-width: 600px) and (orientation: portrait) {
-  :root {
+  .slider-container {
     --menuwidth: 100%;
     --xslide: 0px;
     --menuheight: 50vh;
     --yslide: 50vh;
   }
 }
-.slider-container { /* Could be user-defined? */
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  height: 100%;
-  padding: 0;
+.slider-container {
+  box-sizing: border-box;
 }
 .slider-container div {
   transition: 0.4s;
