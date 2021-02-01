@@ -1,0 +1,48 @@
+* { /* Should this be slider-specific? */
+  box-sizing: border-box;
+}
+:root { /* Should this be a slider-specific selector? */
+  --menuwidth: min(480px, 50vw);
+  --xslide: min(480px, 50vw);
+  --menuheight: 100%;
+  --yslide: 0px;
+}
+@media screen and (max-width: 600px) and (orientation: portrait) {
+  :root {
+    --menuwidth: 100%;
+    --xslide: 0px;
+    --menuheight: 50vh;
+    --yslide: 50vh;
+  }
+}
+.slider-container { /* Could be user-defined? */
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+}
+.slider-container div {
+  transition: 0.4s;
+}
+.slider-main {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+.slider-shifted {
+  transform: translate(calc(0px - var(--xslide) / 2), calc(0px - var(--yslide) / 2));
+}
+.slider-infobox {
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: var(--menuwidth);
+  height: var(--menuheight);
+  transform: translate(var(--xslide), var(--yslide));
+  z-index: 1;
+}
+.slider-slid {
+  transform: translate(0px);
+}

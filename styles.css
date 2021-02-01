@@ -1,62 +1,22 @@
-* {
-  box-sizing: border-box;
+/* DEMO STYLES, not general */
+div {
+  text-align: center;
+}
+.slider-infobox {
+  background: grey;
+}
+.slider-main {
+  background: green;
 }
 body {
   margin: 0;
 }
-:root {
-  --menuwidth: 320px;
-  --menuheight: 100%;
-  --xslide: 320px;
-  --yslide: 0px;
-}
-@media screen and (min-height: 640px) and (orientation: portrait) {
-  :root {
-    --xslide: 0px;
-    --yslide: 320px;
-    --menuwidth: 100%;
-    --menuheight: 320px;
-  }
-}
-div { /* For QC purposes only */
-  text-align: center;
-}
 #slide {
   position: absolute;
+  right: 0;
   z-index: 2;
   background: transparent;
   border: 1px solid grey;
   appearance: none;
   -webkit-appearance: none;
-}
-.transform-container { /* For QC only? Could be user-defined */
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  height: 100%;
-  padding: 0;
-}
-.transform-container div {
-  transition: 0.5s;
-}
-.menu {
-  display: inline-block;
-  position: absolute;
-  width: var(--menuwidth);
-  height: var(--menuheight);
-  transform: translate(calc(0px - var(--xslide)), calc(0px - var(--yslide)));
-  background: grey;
-  z-index: 1;
-}
-.slid {
-  transform: translate(0px);
-}
-.shifted {
-  transform: translate(calc(var(--xslide) / 2), calc(var(--yslide) / 2));
-}
-.main {
-  display: inline-block;
-  width: 100%;
-  height: 100%;
-  background: green;
 }
