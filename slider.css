@@ -13,10 +13,15 @@
     --yslide: 50vh;
   }
 }
+.slider-icon {
+  width: 30px;
+  height: 30px;
+}
 .slider-container {
   box-sizing: border-box;
 }
 .slider-container div {
+  box-sizing: border-box; /* Not inherited! */
   display: inline-block;
   transition: 0.33s;
 }
