@@ -29,6 +29,7 @@
   width: var(--settingwidth);
   height: 100%;
   transform: translate(calc(0px - 100%));
+  visibility: hidden; /* Hide from tab navigation when offscreen */
   z-index: 2;
 }
 .slider-main {
@@ -45,10 +46,11 @@
   width: var(--infowidth);
   height: var(--menuheight);
   transform: translate(var(--xslide), var(--yslide));
+  visibility: hidden; /* Hide from tab navigation when offscreen */
   z-index: 1;
 }
 .slider-slid {
-  display: inline-block;
+  visibility: visible;
   transform: translate(0px);
 }
 .slider-button {
