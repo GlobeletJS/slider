@@ -59,6 +59,10 @@
   padding: 8px;
   appearance: none;
   -webkit-appearance: none;
+  touch-action: manipulation;
+}
+.slider-button svg {
+  touch-action: manipulation;
 }
 .slider-close {
   position: absolute;
