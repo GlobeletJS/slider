@@ -17,11 +17,10 @@
   width: 30px;
   height: 30px;
 }
-.slider-container {
+.slider-container * {
   box-sizing: border-box;
 }
 .slider-container div {
-  box-sizing: border-box; /* Not inherited! */
   display: inline-block;
   transition: 0.33s;
 }
@@ -49,5 +48,25 @@
   z-index: 1;
 }
 .slider-slid {
+  display: inline-block;
   transform: translate(0px);
+}
+.slider-button {
+  background: transparent;
+  border: none;
+  padding: 8px;
+  appearance: none;
+  -webkit-appearance: none;
+}
+.slider-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.slider-close svg {
+  stroke: grey;
+  stroke-width: 2;
+}
+.slider-close:hover svg {
+  stroke: black;
 }

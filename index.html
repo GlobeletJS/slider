@@ -9,14 +9,14 @@
   </head>
 
   <body>
-    <button id="slide">
-      <svg class="slider-icon"><use href="./slider-icons.svg#hamburger" /></svg>
-    </button>
-    <button id="setter">
-      <svg class="slider-icon"><use href="./slider-icons.svg#gear" /></svg>
-    </button>
     <div class="slider-container">
+      <button id="openSettings" class="slider-button">
+        <svg class="slider-icon"><use href="./slider-icons.svg#gear" /></svg>
+      </button>
       <div class="slider-settings" id="settings">
+        <button id="closeSettings" class="slider-button slider-close">
+          <svg class="slider-icon"><use href="./slider-icons.svg#close" /></svg>
+        </button>
         <h1>Settings</h1>
         <p>This menu could be used to turn map layers on or off, or to
           make other adjustments to display parameters.</p>
@@ -27,6 +27,9 @@
         <p>This is where the map itself will be displayed</p>
       </div>
       <div class="slider-infobox" id="info">
+        <button id="closeInfo" class="slider-button slider-close">
+          <svg class="slider-icon"><use href="./slider-icons.svg#close" /></svg>
+        </button>
         <h1>Feature Information</h1>
         <p>When a user selects a feature from the main map, details about
           that feature can be displayed here.</p>
@@ -35,6 +38,9 @@
           behavior should usually prevent the selected feature on the map
           from being covered by the info about the feature.</p>
       </div>
+      <button id="openInfo" class="slider-button">
+        <svg class="slider-icon"><use href="./slider-icons.svg#hamburger" /></svg>
+      </button>
     </div>
   </body>
 

@@ -18,27 +18,16 @@ div {
   background: green;
 }
 .slider-infobox {
-  background: grey;
+  background: #EEE;
 }
 body {
   margin: 0;
 }
-#slide {
+#openInfo {
   position: absolute;
   right: 0;
-  z-index: 2;
-  background: transparent;
-  border: none;
-  padding: 8px;
-  appearance: none;
-  -webkit-appearance: none;
 }
-#setter {
+#openSettings {
   position: absolute;
-  z-index: 3;
-  background: transparent;
-  border: none;
-  padding: 8px;
-  appearance: none;
-  -webkit-appearance: none;
+  z-index: 2;
 }

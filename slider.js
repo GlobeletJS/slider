@@ -20,7 +20,11 @@ const slider = setupSlider({
   mainId: "main",
   infoId: "info",
 });
-document.getElementById("slide")
+document.getElementById("openInfo")
   .addEventListener('click', slider.toggleInfo, false);
-document.getElementById("setter")
+document.getElementById("closeInfo")
+  .addEventListener('click', slider.toggleInfo, false);
+document.getElementById("openSettings")
+  .addEventListener('click', slider.toggleSettings, false);
+document.getElementById("closeSettings")
   .addEventListener('click', slider.toggleSettings, false);
