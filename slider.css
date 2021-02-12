@@ -76,3 +76,10 @@
 .slider-close:hover svg {
   stroke: black;
 }
+.slider-status {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  text-align: right;
+  font-family: "Lucida Console", monospace;
+}

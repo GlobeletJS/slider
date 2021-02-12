@@ -10,9 +10,6 @@
 
   <body>
     <div class="slider-container">
-      <button id="openSettings" class="slider-button">
-        <svg class="slider-icon"><use href="./slider-icons.svg#gear" /></svg>
-      </button>
       <div class="slider-settings" id="settings">
         <button id="closeSettings" class="slider-button slider-close">
           <svg class="slider-icon"><use href="./slider-icons.svg#close" /></svg>
@@ -25,8 +22,18 @@
       <div class="slider-main" id="main">
         <h1>Main Map</h1>
         <p>This is where the map itself will be displayed</p>
+        <div class="slider-status" id="status">
+          Loading %, lon/lat/alt, data attribution
+        </div>
       </div>
+      <button id="openSettings" class="slider-button">
+        <svg class="slider-icon"><use href="./slider-icons.svg#gear" /></svg>
+      </button>
+      <button id="openInfo" class="slider-button">
+        <svg class="slider-icon"><use href="./slider-icons.svg#hamburger" /></svg>
+      </button>
       <div class="slider-infobox" id="info">
+        <span id="featureCoords">&lt;Feature coordinates&gt;</span>
         <button id="closeInfo" class="slider-button slider-close">
           <svg class="slider-icon"><use href="./slider-icons.svg#close" /></svg>
         </button>
@@ -38,9 +45,6 @@
           behavior should usually prevent the selected feature on the map
           from being covered by the info about the feature.</p>
       </div>
-      <button id="openInfo" class="slider-button">
-        <svg class="slider-icon"><use href="./slider-icons.svg#hamburger" /></svg>
-      </button>
     </div>
   </body>
 
