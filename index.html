@@ -9,33 +9,33 @@
   </head>
 
   <body>
-    <div class="slider-container">
-      <div class="slider-settings" id="settings">
-        <button id="closeSettings" class="slider-button slider-close">
-          <svg class="slider-icon slider-stroke"><use href="./slider-icons.svg#close" /></svg>
+    <div class="slider">
+      <div class="settings" id="settings">
+        <button id="closeSettings" class="close-button">
+          <svg class="icon stroke"><use href="./slider-icons.svg#close" /></svg>
         </button>
         <h1>Settings</h1>
         <p>This menu could be used to turn map layers on or off, or to
           make other adjustments to display parameters.</p>
         <p>This menu slides out on top of all other content</p>
       </div>
-      <div class="slider-main" id="main">
+      <div class="main" id="main">
         <h1>Main Map</h1>
         <p>This is where the map itself will be displayed</p>
-        <div class="slider-status" id="status">
+        <div class="status" id="status">
           Loading %, lon/lat/alt, data attribution
         </div>
       </div>
-      <button id="openSettings" class="slider-button">
-        <svg class="slider-icon"><use href="./slider-icons.svg#gear" /></svg>
+      <button id="openSettings">
+        <svg class="icon"><use href="./slider-icons.svg#gear" /></svg>
       </button>
-      <button id="openInfo" class="slider-button">
-        <svg class="slider-icon"><use href="./slider-icons.svg#hamburger" /></svg>
+      <button id="openInfo">
+        <svg class="icon"><use href="./slider-icons.svg#hamburger" /></svg>
       </button>
-      <div class="slider-infobox" id="info">
+      <div class="infobox" id="info">
         <span id="featureCoords">&lt;Feature coordinates&gt;</span>
-        <button id="closeInfo" class="slider-button slider-close">
-          <svg class="slider-icon slider-stroke"><use href="./slider-icons.svg#close" /></svg>
+        <button id="closeInfo" class="close-button">
+          <svg class="icon stroke"><use href="./slider-icons.svg#close" /></svg>
         </button>
         <h1>Feature Information</h1>
         <p>When a user selects a feature from the main map, details about

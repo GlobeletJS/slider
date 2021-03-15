@@ -4,12 +4,12 @@ function setupSlider({ settingId, mainId, infoId }) {
   const infoClassList = document.getElementById(infoId).classList;
 
   function toggleInfo() {
-    infoClassList.toggle("slider-slid");
-    mainClassList.toggle("slider-shifted");
+    infoClassList.toggle("slid");
+    mainClassList.toggle("shifted");
   }
 
   function toggleSettings() {
-    settingClassList.toggle("slider-slid");
+    settingClassList.toggle("slid");
   }
 
   return { toggleInfo, toggleSettings };

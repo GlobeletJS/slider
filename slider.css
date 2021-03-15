@@ -1,4 +1,4 @@
-.slider-container {
+.slider {
   --settingwidth: min(480px, 100vw);
   --infowidth: min(480px, 50vw);
   --xslide: min(480px, 50vw);
@@ -6,21 +6,33 @@
   --yslide: 0px;
 }
 @media screen and (max-width: 768px) and (orientation: portrait) {
-  .slider-container {
+  .slider {
     --infowidth: 100%;
     --xslide: 0px;
     --menuheight: 50vh;
     --yslide: 50vh;
   }
 }
-.slider-container * {
+.slider * {
   box-sizing: border-box;
 }
-.slider-container div {
+.slider div {
   display: inline-block;
   transition: 0.33s;
 }
-.slider-settings {
+.slider button {
+  background: transparent;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  touch-action: manipulation;
+}
+.slider button svg {
+  touch-action: manipulation;
+}
+.slider .settings {
   position: absolute;
   width: var(--settingwidth);
   height: 100%;
@@ -28,14 +40,14 @@
   visibility: hidden; /* Hide from tab navigation when offscreen */
   z-index: 2;
 }
-.slider-main {
+.slider .main {
   width: 100%;
   height: 100%;
 }
-.slider-shifted {
+.slider .shifted {
   transform: translate(calc(0px - var(--xslide) / 2), calc(0px - var(--yslide) / 2));
 }
-.slider-infobox {
+.slider .infobox {
   position: absolute;
   bottom: 0;
   right: 0;
@@ -45,11 +57,11 @@
   visibility: hidden; /* Hide from tab navigation when offscreen */
   z-index: 1;
 }
-.slider-slid {
+.slider .slid {
   visibility: visible;
   transform: translate(0px);
 }
-.slider-status {
+.slider .status {
   position: absolute;
   bottom: 0;
   right: 0;
@@ -59,30 +71,18 @@
   background-color: rgba(34, 34, 34, 0.5);
   padding: 0.2em;
 }
-.slider-button {
-  background: transparent;
-  border: none;
-  padding: 8px;
-  cursor: pointer;
-  appearance: none;
-  -webkit-appearance: none;
-  touch-action: manipulation;
-}
-.slider-button svg {
-  touch-action: manipulation;
-}
-.slider-icon {
+.slider .icon {
   width: 30px;
   height: 30px;
 }
-.slider-stroke {
+.slider .stroke {
   stroke: grey;
   stroke-width: 2;
 }
-.slider-stroke:hover {
+.slider .stroke:hover {
   stroke: black;
 }
-.slider-close {
+.slider .close-button {
   position: absolute;
   top: 0;
   right: 0;
