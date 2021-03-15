@@ -13,10 +13,6 @@
     --yslide: 50vh;
   }
 }
-.slider-icon {
-  width: 30px;
-  height: 30px;
-}
 .slider-container * {
   box-sizing: border-box;
 }
@@ -53,10 +49,21 @@
   visibility: visible;
   transform: translate(0px);
 }
+.slider-status {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  text-align: right;
+  font-family: "Lucida Console", monospace;
+  color: white;
+  background-color: rgba(34, 34, 34, 0.5);
+  padding: 0.2em;
+}
 .slider-button {
   background: transparent;
   border: none;
   padding: 8px;
+  cursor: pointer;
   appearance: none;
   -webkit-appearance: none;
   touch-action: manipulation;
@@ -64,22 +71,19 @@
 .slider-button svg {
   touch-action: manipulation;
 }
+.slider-icon {
+  width: 30px;
+  height: 30px;
+}
+.slider-stroke {
+  stroke: grey;
+  stroke-width: 2;
+}
+.slider-stroke:hover {
+  stroke: black;
+}
 .slider-close {
   position: absolute;
   top: 0;
   right: 0;
-}
-.slider-close svg {
-  stroke: grey;
-  stroke-width: 2;
-}
-.slider-close:hover svg {
-  stroke: black;
-}
-.slider-status {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  text-align: right;
-  font-family: "Lucida Console", monospace;
 }
